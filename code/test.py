@@ -3,7 +3,7 @@ exports.handler = async (event) => {
         const input = event.body;
         const parts = input.split(';');
         if (parts.length < 5) {
-            throw new Error('Invalid input format');
+            throw new Error('Ivalid input format');
         }
         const raw_message = parts[3];
         const dateOfBirth = raw_message.substring(31, 39);
