@@ -1,19 +1,10 @@
 import json
 
 def lambda_handler(event, context):
-    # Parse the request body
-    try:
-        body = json.loads(event['body'])
-    except (json.JSONDecodeError, KeyError):
-        return {
-            'statusCode': 400,
-            'body': json.dumps('Invalid request: JSON body is required')
-        }
-
-    # Extract values of a and b from the body
-    a = body.get('a')
-    b = body.get('b')
-    
+    # Extract values of a and b from the input JSON
+    a = event.get('a')
+    b = event.get('b')
+    console.log("hello")
     # Ensure a and b are provided and are numbers
     if a is None or b is None:
         return {
