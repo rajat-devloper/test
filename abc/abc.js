@@ -1,6 +1,4 @@
 function sum(a, b) {
     return a + b;
-    console.log("fdffsfsdf")
+    console.log("hello")
 }
-
-// this is comment
